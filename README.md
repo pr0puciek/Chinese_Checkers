@@ -1,9 +1,5 @@
 # Chinese_Checkers
-## Java implementation of Chinese Checkers
-
-###### Author : John Cyr 
-###### Date : 12/3/15 
-###### Class : COP3253 Fall 2015  
+## COP3253 Fall 2015 12/3/15
 
 ##### How to Play:
 
