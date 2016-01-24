@@ -142,10 +142,7 @@ public class ChineseCheckers extends JFrame {
 			mode_8 = new ImageIcon(getClass().getResource("images/mode_8.jpg"));
     		
     		boardBKG = new ImageIcon(getClass().getResource("images/board_620.jpg"));
-    		// JLabel temp = new JLabel();
-    		// temp.setIcon(d_grn);
-    		// System.out.println(temp.getIcon());
-    		// System.out.println(d_grn);
+    		
     	} // end of initImageIcons
     	
     	//////////////////////////////////////////////////////////////////////
@@ -432,8 +429,7 @@ public class ChineseCheckers extends JFrame {
 				-10, SpringLayout.SOUTH, this);
 	        boardLayout.putConstraint(SpringLayout.EAST, endTurn, 
 	        	-10, SpringLayout.EAST, this);
-
-    		
+	        
     		add(endTurn);
 
     		endTurn.setVisible(false);
@@ -1178,7 +1174,7 @@ public class ChineseCheckers extends JFrame {
 
 		 	private boolean hasJumped = false;
 
-	        // STARTING MOUSE PRESSED ON PIECE TO MOVE
+	        // MOUSE PRESSED ON PIECE TO MOVE
 	        public void mousePressed( MouseEvent event ) {
 	        	if (event.getSource() != endTurn) {
 		        	start = (JLabel) event.getSource();
@@ -1190,7 +1186,6 @@ public class ChineseCheckers extends JFrame {
 	        		
 	        			start.setIcon(getImageIcon(getColorInt(start), 's'));
 	        			showMoves(start);
-		        	
 		        	}
 		        	
 		        	if (!gameOver && gameStarted && isTurn(start) 
@@ -1230,7 +1225,8 @@ public class ChineseCheckers extends JFrame {
 
 	        	hideMoves(start);	        	
 
-	        	// MOVE if labels are not the same, is blankspace and move is in range, JUMP CHECK NEEDS TO BE WRITTEN
+	        	// MOVE if labels are not the same, 
+	        	// is blankspace and move is in range
 	        	if (!moveMade) { // IF NO MOVE MADE RESET START TO ORIGINAL
 	        		start.setIcon(getImageIcon(getColorInt(start), 'o'));
 	        	} else { // ELSE SET START TO BLANK
@@ -1342,9 +1338,7 @@ public class ChineseCheckers extends JFrame {
 
 			}
 
-			public void mouseReleased(MouseEvent e) {
-
-			}
+			public void mouseReleased(MouseEvent e) { }
 
 			public void mouseEntered(MouseEvent e) {
 				if (e.getSource() == modes[0]) bkg = getImageIcon(0,'m');
@@ -1369,17 +1363,6 @@ public class ChineseCheckers extends JFrame {
 
 			}
 		} // end of OptionMouseHandler class
-
-
-
 	} // end of Board class
 } // end of ChineseCheckers class
 
-
-
-/*
-	add background selection option
-	add marble sounds 
-
-
-*/
