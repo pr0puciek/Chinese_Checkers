@@ -2,7 +2,7 @@ chineseCheckers: ChineseCheckers.java
 	clear
 	make clean
 	javac ChineseCheckers.java
-	jar cvfm ChineseCheckers.jar manifest.mf *.class *.java images README.txt 
+	jar cvfm ChineseCheckers.jar manifest.mf *.class *.java images README.md
 	clear
 	java -jar ChineseCheckers.jar
 
